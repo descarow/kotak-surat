@@ -47,7 +47,7 @@
             <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
           </a>
           <a href="#" class="btn btn-block btn-danger">
-            <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+            <i class="fab fa-google mr-2"></i> Sign in using Google
           </a>
         </div>
         <!-- /.social-auth-links -->
@@ -56,7 +56,7 @@
           <a href="forgot-password.html">I forgot my password</a>
         </p>
         <p class="mb-0">
-          <a href="register.html" class="text-center">Register a new membership</a>
+          <a href="/reg" class="text-center">Register a new membership</a>
         </p>
       </div>
       <!-- /.login-card-body -->

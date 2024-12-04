@@ -7,7 +7,15 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('auth');
+    return view('authlogin');
+});
+
+Route::get('/reg', function () {
+    return view('authreg');
+});
+
+Route::get('/main', function () {
+    return view('main');
 });
 
 // route::get('/', [HomeController::class, 'index']);

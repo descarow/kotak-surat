@@ -1,9 +1,10 @@
-            <footer class="main-footer">
-                <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-                </div>
-            </footer>
-        </div>
+<footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Made with love life laugh</b>
+    </div>
+    <strong>Copyright &copy; 2024 <a href="https://adminlte.io">Adore</a>.</strong> All rights reserved.
+  </footer>
+
 
         <script src="{{asset('lte/plugins/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('lte/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
