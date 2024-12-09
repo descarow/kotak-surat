@@ -7,9 +7,8 @@
      @include('frontend.style')
 </head>
 
-<body class="hold-transition login-page">
-    <div class="justify-content: center">
-        @include('auth.login')
-    </div>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+     @include('auth.login')
 </body>
 </html>

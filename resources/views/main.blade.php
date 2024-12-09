@@ -1,902 +1,1442 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    {{-- <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35959721-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-35959721-1');
-    </script> --}}
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <!-- Place this data between the <head> tags of your website -->
-    <title>saran</title>
-    <meta name="description" content="Feedback Box">
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d7381b">
-    <meta name="apple-mobile-web-app-title" content="LAPOR!">
-    <meta name="application-name" content="LAPOR!">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
-    <!-- App Styles -->
-    <link href="https://www.lapor.go.id/combine/1f25329929a6e3be6bfecc9f75ad47a4-1732462798" rel="stylesheet">
-
-    <script src="https://www.lapor.go.id/themes/lapor/assets/sweetalert2/sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="https://www.lapor.go.id/plugins/responsiv/uploader/assets/css/uploader.css">
-    <style>
-        .grecaptcha-badge {
-            width: 70px !important;
-            overflow: hidden !important;
-            transition: all 0.3s ease !important;
-            left: 4px !important;
-        }
-
-        .grecaptcha-badge:hover {
-            width: 256px !important;
-        }
-
-        .file-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .file-name {
-            flex: 1;
-        }
-
-        .delete-button {
-            background-color: transparent;
-            border: none;
-            font-size: 1em;
-            cursor: pointer;
-        }
-
-        .custom-file-upload {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-
-        .file-label {
-            display: flex;
-            /* Menggunakan flexbox */
-            align-items: center;
-            /* Menengahkan vertikal */
-            justify-content: center;
-            /* Menengahkan horizontal */
-            padding: 10px 25px;
-            border: 2px dashed rgba(0, 0, 0, 0.3);
-            text-align: center;
-            background: none;
-            border-radius: 4px;
-            height: 60px;
-            font-size: 14px;
-            white-space: nowrap;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: bold;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-
-        .file-label:hover {
-            background-color: #f2f2f2;
-        }
-
-        .file-label span {
-            display: block;
-        }
-
-        /* Styling for file input (hidden) */
-        input[type="file"] {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-        }
-    </style>
-    <link rel="stylesheet" type="text/css" href="https://saran/themes/saran/assets/select2/css/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="https://saran/themes/saran/assets/select2/css/select2totree.css">
-    <link rel="stylesheet" href="https://saran/combine/123ac454e5c0bbc14ab488c286854934-1732462797">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-            <![endif]-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://saran/combine/8d931db45eae6ac902515c50c03fad65-1732462797"></script>
-    <script src="https://saran/themes/lapor/assets/js/zingchart.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script> <!-- Baru chart plugin untuk pie -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <title>
+    Soft UI Dashboard 3 by Creative Tim
+  </title>
+  <!-- Extra details for Live View on GitHub Pages -->
+  <!-- Canonical SEO -->
+  <link rel="canonical" href="https://www.creative-tim.com/product/soft-ui-dashboard" />
+  <!--  Social tags      -->
+  <meta name="keywords" content="creative tim, html dashboard, html css dashboard, web dashboard, bootstrap 5 dashboard, bootstrap 5, css3 dashboard, bootstrap 5 admin, Soft UI Dashboard bootstrap 5 dashboard, frontend, responsive bootstrap 5 dashboard, free dashboard, free admin dashboard, free bootstrap 5 admin dashboard">
+  <meta name="description" content="Soft UI Dashboard 3 is a beautiful Bootstrap 5 admin dashboard with a large number of components, designed to look beautiful and organized. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you.">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="product">
+  <meta name="twitter:site" content="@creativetim">
+  <meta name="twitter:title" content="Soft UI Dashboard 3 by Creative Tim">
+  <meta name="twitter:description" content="Soft UI Dashboard 3 is a beautiful Bootstrap 5 admin dashboard with a large number of components, designed to look beautiful and organized. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you.">
+  <meta name="twitter:creator" content="@creativetim">
+  <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/450/original/opt_sd_free_thumbnail.png">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="655968634437471">
+  <meta property="og:title" content="Soft UI Dashboard 3 by Creative Tim" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://demos.creative-tim.com/soft-ui-dashboard/examples/dashboard.html" />
+  <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/450/original/opt_sd_free_thumbnail.png" />
+  <meta property="og:description" content="Soft UI Dashboard 3 is a beautiful Bootstrap 5 admin dashboard with a large number of components, designed to look beautiful and organized. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you." />
+  <meta property="og:site_name" content="Creative Tim" />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- CSS Files -->
+  <link id="pagestyle" href="{{asset('softui/assets/css/soft-ui-dashboard.min.css?v=1.1.0')}}" rel="stylesheet" />
+  <!-- Anti-flicker snippet (recommended)  -->
+  <style>
+    .async-hide {
+      opacity: 0 !important
+    }
+  </style>
+  <script>
+    (function(a, s, y, n, c, h, i, d, e) {
+      s.className += ' ' + y;
+      h.start = 1 * new Date;
+      h.end = i = function() {
+        s.className = s.className.replace(RegExp(' ?' + y), '')
+      };
+      (a[n] = a[n] || []).hide = h;
+      setTimeout(function() {
+        i();
+        h.end = null
+      }, c);
+      h.timeout = c;
+    })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+      'GTM-K9BGS8K': true
+    });
+  </script>
+  <!-- Analytics-Optimize Snippet -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-46172202-22', 'auto', {
+      allowLinker: true
+    });
+    ga('set', 'anonymizeIp', true);
+    ga('require', 'GTM-K9BGS8K');
+    ga('require', 'displayfeatures');
+    ga('require', 'linker');
+    ga('linker:autoLink', ["2checkout.com", "avangate.com"]);
+  </script>
+  <!-- end Analytics-Optimize Snippet -->
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="demos.creative-tim.com" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
 
-<body class="page-home pd-t-0 ">
-    <div class="loader-custom hidden"></div>
-    <div id="search-bar">
-        <div class="container">
-            <form action="/search">
-                <input type="search" class="" name="q" placeholder="Kata kunci atau tracking ID..." autocomplete="off" value="">
-                <i class="fa fa-search"></i>
-            </form>
-        </div>
+<body class="g-sidenav-show  bg-gray-100">
+  <!-- Extra details for Live View on GitHub Pages -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html " target="_blank">
+        <img src="../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold">Soft UI Dashboard 3</span>
+      </a>
     </div>
-
-    <nav id="leftMenu" class="navmenu navmenu-default navmenu-inverse navmenu-fixed-left offcanvas" role="navigation">
-        <ul class="nav navmenu-nav">
-            <li role="presentation" class="  ">
-                <a href="">
-                    Tentang
-                </a>
-            </li>
-            <li role="presentation" class="  ">
-                <a href="">
-                    Statistik
-                </a>
-            </li>
-            <li role="presentation" class="d-block d-xs-none">
-                <div class="form-group">
-                    <form action="/search">
-                        <input type="search" class="form-control" name="q" placeholder="Kata kunci atau tracking ID..." autocomplete="off">
-                    </form>
-                </div>
-            </li>
-        </ul>
-    </nav>
-
-    {{-- <header class="navbar-fixed-top navbar-inverse ">
-        <div class="notice-bar download-android-app visible-sm visible-xs hidden">
-            <div class="">
-                <div class="col-xs-12 col-sm-12 icon-playstore hidden">
-                    <a href="https://play.google.com/store/apps/details?id=com.deptech.lapor&referrer=utm_source%3Dwebsite%26utm_medium%3Dlapor.go.id%26anid%3Dadmob" target="_blank">
-                        <img src="https://www.lapor.go.id/themes/lapor/assets/images/icon-playstore.png" alt="" class="img-responsive">
-                    </a>
-                    Lapor! Versi Android
-                </div>
-                <div class="col-xs-12 col-sm-12 icon-appstore hidden">
-                    <a href="https://click.google-analytics.com/redirect?tid=UA-146892450-1&url=https%3A%2F%2Fitunes.apple.com%2Fid%2Fapp%2Fsp4n-lapor%2Fid1486554343&aid=com.deptech.lapor&idfa={idfa}&cs=website&cm=lapor.go.id&anid=admob&hash=md5" target="_blank">
-                        <img src="https://www.lapor.go.id/themes/lapor/assets/images/icon-appstore.png" alt="" class="img-responsive">
-                    </a>
-                    Lapor! Versi iOS
-                </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link  active" href="../pages/dashboard.html">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>shop </title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-1716.000000, -439.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(0.000000, 148.000000)">
+                        <path class="color-background opacity-6" d="M46.7199583,10.7414583 L40.8449583,0.949791667 C40.4909749,0.360605034 39.8540131,0 39.1666667,0 L7.83333333,0 C7.1459869,0 6.50902508,0.360605034 6.15504167,0.949791667 L0.280041667,10.7414583 C0.0969176761,11.0460037 -1.23209662e-05,11.3946378 -1.23209662e-05,11.75 C-0.00758042603,16.0663731 3.48367543,19.5725301 7.80004167,19.5833333 L7.81570833,19.5833333 C9.75003686,19.5882688 11.6168794,18.8726691 13.0522917,17.5760417 C16.0171492,20.2556967 20.5292675,20.2556967 23.494125,17.5760417 C26.4604562,20.2616016 30.9794188,20.2616016 33.94575,17.5760417 C36.2421905,19.6477597 39.5441143,20.1708521 42.3684437,18.9103691 C45.1927731,17.649886 47.0084685,14.8428276 47.0000295,11.75 C47.0000295,11.3946378 46.9030823,11.0460037 46.7199583,10.7414583 Z"></path>
+                        <path class="color-background" d="M39.198,22.4912623 C37.3776246,22.4928106 35.5817531,22.0149171 33.951625,21.0951667 L33.92225,21.1107282 C31.1430221,22.6838032 27.9255001,22.9318916 24.9844167,21.7998837 C24.4750389,21.605469 23.9777983,21.3722567 23.4960833,21.1018359 L23.4745417,21.1129513 C20.6961809,22.6871153 17.4786145,22.9344611 14.5386667,21.7998837 C14.029926,21.6054643 13.533337,21.3722507 13.0522917,21.1018359 C11.4250962,22.0190609 9.63246555,22.4947009 7.81570833,22.4912623 C7.16510551,22.4842162 6.51607673,22.4173045 5.875,22.2911849 L5.875,44.7220845 C5.875,45.9498589 6.7517757,46.9451667 7.83333333,46.9451667 L19.5833333,46.9451667 L19.5833333,33.6066734 L27.4166667,33.6066734 L27.4166667,46.9451667 L39.1666667,46.9451667 C40.2482243,46.9451667 41.125,45.9498589 41.125,44.7220845 L41.125,22.2822926 C40.4887822,22.4116582 39.8442868,22.4815492 39.198,22.4912623 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
             </div>
-        </div> --}}
-
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle navbar-toggle-left" data-toggle="offcanvas" data-target="#leftMenu" data-canvas="body">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                {{-- <a class="navbar-brand" href="https://www.lapor.go.id">
-                    <img src="https://www.lapor.go.id/themes/lapor/assets/images/logo.png" alt="" class="img-responsive hidden-navbar-inverse">
-                    <img src="https://www.lapor.go.id/themes/lapor/assets/images/logo-white.png" alt="" class="img-responsive hidden-navbar-default">
-                </a> --}}
-
-                <a type="button" class="btn navbar-btn navbar-btn-mobile navbar-btn-user pull-right visible-xs" data-toggle="modal" data-target="#exampleModal" style="background-color: transparent; color: white; margin-top: 28px !important;">
-                    <i style="margin-top: 5% !important;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
-                            <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
-                            <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
+            <span class="nav-link-text ms-1">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="../pages/tables.html">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>office</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g id="office" transform="translate(153.000000, 2.000000)">
+                        <path class="color-background opacity-6" d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"></path>
+                        <path class="color-background" d="M40.25,14 L24.5,14 C23.53225,14 22.75,14.78225 22.75,15.75 L22.75,38.5 L19.25,38.5 L19.25,22.75 C19.25,21.78225 18.46775,21 17.5,21 L1.75,21 C0.78225,21 0,21.78225 0,22.75 L0,40.25 C0,41.21775 0.78225,42 1.75,42 L40.25,42 C41.21775,42 42,41.21775 42,40.25 L42,15.75 C42,14.78225 41.21775,14 40.25,14 Z M12.25,36.75 L7,36.75 L7,33.25 L12.25,33.25 L12.25,36.75 Z M12.25,29.75 L7,29.75 L7,26.25 L12.25,26.25 L12.25,29.75 Z M35,36.75 L29.75,36.75 L29.75,33.25 L35,33.25 L35,36.75 Z M35,29.75 L29.75,29.75 L29.75,26.25 L35,26.25 L35,29.75 Z M35,22.75 L29.75,22.75 L29.75,19.25 L35,19.25 L35,22.75 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Tables</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="../pages/billing.html">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>credit-card</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(453.000000, 454.000000)">
+                        <path class="color-background opacity-6" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"></path>
+                        <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Billing</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="../pages/virtual-reality.html">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>box-3d-50</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(603.000000, 0.000000)">
+                        <path class="color-background" d="M22.7597136,19.3090182 L38.8987031,11.2395234 C39.3926816,10.9925342 39.592906,10.3918611 39.3459167,9.89788265 C39.249157,9.70436312 39.0922432,9.5474453 38.8987261,9.45068056 L20.2741875,0.1378125 L20.2741875,0.1378125 C19.905375,-0.04725 19.469625,-0.04725 19.0995,0.1378125 L3.1011696,8.13815822 C2.60720568,8.38517662 2.40701679,8.98586148 2.6540352,9.4798254 C2.75080129,9.67332903 2.90771305,9.83023153 3.10122239,9.9269862 L21.8652864,19.3090182 C22.1468139,19.4497819 22.4781861,19.4497819 22.7597136,19.3090182 Z"></path>
+                        <path class="color-background opacity-6" d="M23.625,22.429159 L23.625,39.8805372 C23.625,40.4328219 24.0727153,40.8805372 24.625,40.8805372 C24.7802551,40.8805372 24.9333778,40.8443874 25.0722402,40.7749511 L41.2741875,32.673375 L41.2741875,32.673375 C41.719125,32.4515625 42,31.9974375 42,31.5 L42,14.241659 C42,13.6893742 41.5522847,13.241659 41,13.241659 C40.8447549,13.241659 40.6916418,13.2778041 40.5527864,13.3472318 L24.1777864,21.5347318 C23.8390024,21.7041238 23.625,22.0503869 23.625,22.429159 Z"></path>
+                        <path class="color-background opacity-6" d="M20.4472136,21.5347318 L1.4472136,12.0347318 C0.953235098,11.7877425 0.352562058,11.9879669 0.105572809,12.4819454 C0.0361450918,12.6208008 6.47121774e-16,12.7739139 0,12.929159 L0,30.1875 L0,30.1875 C0,30.6849375 0.280875,31.1390625 0.7258125,31.3621875 L19.5528096,40.7750766 C20.0467945,41.0220531 20.6474623,40.8218132 20.8944388,40.3278283 C20.963859,40.1889789 21,40.0358742 21,39.8806379 L21,22.429159 C21,22.0503869 20.7859976,21.7041238 20.4472136,21.5347318 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Virtual Reality</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="../pages/rtl.html">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>settings</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-2020.000000, -442.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(304.000000, 151.000000)">
+                        <polygon class="color-background opacity-6" points="18.0883333 15.7316667 11.1783333 8.82166667 13.3333333 6.66666667 6.66666667 0 0 6.66666667 6.66666667 13.3333333 8.82166667 11.1783333 15.315 17.6716667"></polygon>
+                        <path class="color-background opacity-6" d="M31.5666667,23.2333333 C31.0516667,23.2933333 30.53,23.3333333 30,23.3333333 C29.4916667,23.3333333 28.9866667,23.3033333 28.48,23.245 L22.4116667,30.7433333 L29.9416667,38.2733333 C32.2433333,40.575 35.9733333,40.575 38.275,38.2733333 L38.275,38.2733333 C40.5766667,35.9716667 40.5766667,32.2416667 38.275,29.94 L31.5666667,23.2333333 Z"></path>
+                        <path class="color-background" d="M33.785,11.285 L28.715,6.215 L34.0616667,0.868333333 C32.82,0.315 31.4483333,0 30,0 C24.4766667,0 20,4.47666667 20,10 C20,10.99 20.1483333,11.9433333 20.4166667,12.8466667 L2.435,27.3966667 C0.95,28.7083333 0.0633333333,30.595 0.00333333333,32.5733333 C-0.0583333333,34.5533333 0.71,36.4916667 2.11,37.89 C3.47,39.2516667 5.27833333,40 7.20166667,40 C9.26666667,40 11.2366667,39.1133333 12.6033333,37.565 L27.1533333,19.5833333 C28.0566667,19.8516667 29.01,20 30,20 C35.5233333,20 40,15.5233333 40,10 C40,8.55166667 39.685,7.18 39.1316667,5.93666667 L33.785,11.285 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">RTL</span>
+          </a>
+        </li>
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="../pages/profile.html">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>customer-support</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-1717.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(1.000000, 0.000000)">
+                        <path class="color-background opacity-6" d="M45,0 L26,0 C25.447,0 25,0.447 25,1 L25,20 C25,20.379 25.214,20.725 25.553,20.895 C25.694,20.965 25.848,21 26,21 C26.212,21 26.424,20.933 26.6,20.8 L34.333,15 L45,15 C45.553,15 46,14.553 46,14 L46,1 C46,0.447 45.553,0 45,0 Z"></path>
+                        <path class="color-background" d="M22.883,32.86 C20.761,32.012 17.324,31 13,31 C8.676,31 5.239,32.012 3.116,32.86 C1.224,33.619 0,35.438 0,37.494 L0,41 C0,41.553 0.447,42 1,42 L25,42 C25.553,42 26,41.553 26,41 L26,37.494 C26,35.438 24.776,33.619 22.883,32.86 Z"></path>
+                        <path class="color-background" d="M13,28 C17.432,28 21,22.529 21,18 C21,13.589 17.411,10 13,10 C8.589,10 5,13.589 5,18 C5,22.529 8.568,28 13,28 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="../pages/sign-in.html">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>document</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-1870.000000, -591.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(154.000000, 300.000000)">
+                        <path class="color-background opacity-6" d="M40,40 L36.3636364,40 L36.3636364,3.63636364 L5.45454545,3.63636364 L5.45454545,0 L38.1818182,0 C39.1854545,0 40,0.814545455 40,1.81818182 L40,40 Z"></path>
+                        <path class="color-background" d="M30.9090909,7.27272727 L1.81818182,7.27272727 C0.814545455,7.27272727 0,8.08727273 0,9.09090909 L0,41.8181818 C0,42.8218182 0.814545455,43.6363636 1.81818182,43.6363636 L30.9090909,43.6363636 C31.9127273,43.6363636 32.7272727,42.8218182 32.7272727,41.8181818 L32.7272727,9.09090909 C32.7272727,8.08727273 31.9127273,7.27272727 30.9090909,7.27272727 Z M18.1818182,34.5454545 L7.27272727,34.5454545 L7.27272727,30.9090909 L18.1818182,30.9090909 L18.1818182,34.5454545 Z M25.4545455,27.2727273 L7.27272727,27.2727273 L7.27272727,23.6363636 L25.4545455,23.6363636 L25.4545455,27.2727273 Z M25.4545455,20 L7.27272727,20 L7.27272727,16.3636364 L25.4545455,16.3636364 L25.4545455,20 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Sign In</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="../pages/sign-up.html">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>spaceship</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-1720.000000, -592.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(4.000000, 301.000000)">
+                        <path class="color-background" d="M39.3,0.706666667 C38.9660984,0.370464027 38.5048767,0.192278529 38.0316667,0.216666667 C14.6516667,1.43666667 6.015,22.2633333 5.93166667,22.4733333 C5.68236407,23.0926189 5.82664679,23.8009159 6.29833333,24.2733333 L15.7266667,33.7016667 C16.2013871,34.1756798 16.9140329,34.3188658 17.535,34.065 C17.7433333,33.98 38.4583333,25.2466667 39.7816667,1.97666667 C39.8087196,1.50414529 39.6335979,1.04240574 39.3,0.706666667 Z M25.69,19.0233333 C24.7367525,19.9768687 23.3029475,20.2622391 22.0572426,19.7463614 C20.8115377,19.2304837 19.9992882,18.0149658 19.9992882,16.6666667 C19.9992882,15.3183676 20.8115377,14.1028496 22.0572426,13.5869719 C23.3029475,13.0710943 24.7367525,13.3564646 25.69,14.31 C26.9912731,15.6116662 26.9912731,17.7216672 25.69,19.0233333 L25.69,19.0233333 Z"></path>
+                        <path class="color-background opacity-6" d="M1.855,31.4066667 C3.05106558,30.2024182 4.79973884,29.7296005 6.43969145,30.1670277 C8.07964407,30.6044549 9.36054508,31.8853559 9.7979723,33.5253085 C10.2353995,35.1652612 9.76258177,36.9139344 8.55833333,38.11 C6.70666667,39.9616667 0,40 0,40 C0,40 0,33.2566667 1.855,31.4066667 Z"></path>
+                        <path class="color-background opacity-6" d="M17.2616667,3.90166667 C12.4943643,3.07192755 7.62174065,4.61673894 4.20333333,8.04166667 C3.31200265,8.94126033 2.53706177,9.94913142 1.89666667,11.0416667 C1.5109569,11.6966059 1.61721591,12.5295394 2.155,13.0666667 L5.47,16.3833333 C8.55036617,11.4946947 12.5559074,7.25476565 17.2616667,3.90166667 L17.2616667,3.90166667 Z"></path>
+                        <path class="color-background opacity-6" d="M36.0983333,22.7383333 C36.9280725,27.5056357 35.3832611,32.3782594 31.9583333,35.7966667 C31.0587397,36.6879974 30.0508686,37.4629382 28.9583333,38.1033333 C28.3033941,38.4890431 27.4704606,38.3827841 26.9333333,37.845 L23.6166667,34.53 C28.5053053,31.4496338 32.7452344,27.4440926 36.0983333,22.7383333 L36.0983333,22.7383333 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Sign Up</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidenav-footer mx-3 ">
+      <div class="card card-background shadow-none card-background-mask-secondary" id="sidenavCard">
+        <div class="full-background" style="background-image: url('../assets/img/curved-images/white-curved.jpg')"></div>
+        <div class="card-body text-start p-3 w-100">
+          <div class="icon icon-shape icon-sm bg-white shadow text-center mb-3 d-flex align-items-center justify-content-center border-radius-md">
+            <i class="ni ni-diamond text-dark text-gradient text-lg top-0" aria-hidden="true" id="sidenavCardIcon"></i>
+          </div>
+          <div class="docs-info">
+            <h6 class="text-white up mb-0">Need help?</h6>
+            <p class="text-xs font-weight-bold">Please check our docs</p>
+            <a href="https://www.creative-tim.com/learning-lab/bootstrap/license/soft-ui-dashboard" target="_blank" class="btn btn-white btn-sm w-100 mb-0">Documentation</a>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-primary mt-3 w-100" href="https://www.creative-tim.com/product/soft-ui-dashboard-pro?ref=sidebarfree">Upgrade to pro</a>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+          </ol>
+          <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            <div class="input-group">
+              <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Type here...">
+            </div>
+          </div>
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-flex align-items-center">
+              <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="https://www.creative-tim.com/builder?ref=navbar-soft-ui-dashboard">Online Builder</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
+                <i class="fa fa-user me-sm-1"></i>
+                <span class="d-sm-inline d-none">Sign In</span>
+              </a>
+            </li>
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item px-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0">
+                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown pe-2 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-bell cursor-pointer"></i>
+              </a>
+              <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="../assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New message</span> from Laur
+                        </h6>
+                        <p class="text-xs text-secondary mb-0 ">
+                          <i class="fa fa-clock me-1"></i>
+                          13 minutes ago
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New album</span> by Travis Scott
+                        </h6>
+                        <p class="text-xs text-secondary mb-0 ">
+                          <i class="fa fa-clock me-1"></i>
+                          1 day
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
+                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>credit-card</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                              <g transform="translate(1716.000000, 291.000000)">
+                                <g transform="translate(453.000000, 454.000000)">
+                                  <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
+                                  <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
                         </svg>
-                    </i>
-                </a>
-                <a href="#" class="btn btn-outline-white btn-sm navbar-btn navbar-btn-mobile pull-right visible-xs" data-toggle="modal" data-target="#modalLogin" style="margin-right: 15px"><i class="fa fa-user"></i></a>
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          Payment successfully completed
+                        </h6>
+                        <p class="text-xs text-secondary mb-0 ">
+                          <i class="fa fa-clock me-1"></i>
+                          2 days
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-lg-6 col-12">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="card">
+                <span class="mask bg-primary opacity-10 border-radius-lg"></span>
+                <div class="card-body p-3 position-relative">
+                  <div class="row">
+                    <div class="col-8 text-start">
+                      <div class="icon icon-shape bg-white shadow text-center border-radius-2xl">
+                        <i class="ni ni-circle-08 text-dark text-gradient text-lg opacity-10" aria-hidden="true"></i>
+                      </div>
+                      <h5 class="text-white font-weight-bolder mb-0 mt-3">
+                        1600
+                      </h5>
+                      <span class="text-white text-sm">Users Active</span>
+                    </div>
+                    <div class="col-4">
+                      <div class="dropdown text-end mb-6">
+                        <a href="javascript:;" class="cursor-pointer" id="dropdownUsers1" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-ellipsis-h text-white"></i>
+                        </a>
+                        <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownUsers1">
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                        </ul>
+                      </div>
+                      <p class="text-white text-sm text-end font-weight-bolder mt-auto mb-0">+55%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-left navbar-primary">
-                    <li role="presentation" class="  ">
-                        <a href="https://www.lapor.go.id/tentang">
-                            Tentang
+            <div class="col-lg-6 col-md-6 col-12 mt-4 mt-md-0">
+              <div class="card">
+                <span class="mask bg-dark opacity-10 border-radius-lg"></span>
+                <div class="card-body p-3 position-relative">
+                  <div class="row">
+                    <div class="col-8 text-start">
+                      <div class="icon icon-shape bg-white shadow text-center border-radius-2xl">
+                        <i class="ni ni-active-40 text-dark text-gradient text-lg opacity-10" aria-hidden="true"></i>
+                      </div>
+                      <h5 class="text-white font-weight-bolder mb-0 mt-3">
+                        357
+                      </h5>
+                      <span class="text-white text-sm">Click Events</span>
+                    </div>
+                    <div class="col-4">
+                      <div class="dropstart text-end mb-6">
+                        <a href="javascript:;" class="cursor-pointer" id="dropdownUsers2" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-ellipsis-h text-white"></i>
                         </a>
-
-                    </li>
-                    <li role="presentation" class="  ">
-                        <a href="https://www.lapor.go.id/statistik">
-                            Statistik
+                        <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownUsers2">
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                        </ul>
+                      </div>
+                      <p class="text-white text-sm text-end font-weight-bolder mt-auto mb-0">+124%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="card">
+                <span class="mask bg-dark opacity-10 border-radius-lg"></span>
+                <div class="card-body p-3 position-relative">
+                  <div class="row">
+                    <div class="col-8 text-start">
+                      <div class="icon icon-shape bg-white shadow text-center border-radius-2xl">
+                        <i class="ni ni-cart text-dark text-gradient text-lg opacity-10" aria-hidden="true"></i>
+                      </div>
+                      <h5 class="text-white font-weight-bolder mb-0 mt-3">
+                        2300
+                      </h5>
+                      <span class="text-white text-sm">Purchases</span>
+                    </div>
+                    <div class="col-4">
+                      <div class="dropdown text-end mb-6">
+                        <a href="javascript:;" class="cursor-pointer" id="dropdownUsers3" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-ellipsis-h text-white"></i>
                         </a>
-
-                    </li>
-                </ul>
-
-                <div class="nav navbar-nav navbar-right mg-l-10  hidden-sm">
-                    <a href="https://www.lapor.go.id/account/register" class="btn navbar-btn pull-right btn-outline-white">
-                        Daftar
+                        <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownUsers3">
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                        </ul>
+                      </div>
+                      <p class="text-white text-sm text-end font-weight-bolder mt-auto mb-0">+15%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 mt-4 mt-md-0">
+              <div class="card">
+                <span class="mask bg-dark opacity-10 border-radius-lg"></span>
+                <div class="card-body p-3 position-relative">
+                  <div class="row">
+                    <div class="col-8 text-start">
+                      <div class="icon icon-shape bg-white shadow text-center border-radius-2xl">
+                        <i class="ni ni-like-2 text-dark text-gradient text-lg opacity-10" aria-hidden="true"></i>
+                      </div>
+                      <h5 class="text-white font-weight-bolder mb-0 mt-3">
+                        940
+                      </h5>
+                      <span class="text-white text-sm">Likes</span>
+                    </div>
+                    <div class="col-4">
+                      <div class="dropstart text-end mb-6">
+                        <a href="javascript:;" class="cursor-pointer" id="dropdownUsers4" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-ellipsis-h text-white"></i>
+                        </a>
+                        <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownUsers4">
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                          <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                        </ul>
+                      </div>
+                      <p class="text-white text-sm text-end font-weight-bolder mt-auto mb-0">+90%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+          <div class="card shadow h-100">
+            <div class="card-header pb-0 p-3">
+              <h6 class="mb-0">Reviews</h6>
+            </div>
+            <div class="card-body pb-0 p-3">
+              <ul class="list-group">
+                <li class="list-group-item border-0 d-flex align-items-center px-0 mb-0">
+                  <div class="w-100">
+                    <div class="d-flex mb-2">
+                      <span class="me-2 text-sm font-weight-bold text-dark">Positive Reviews</span>
+                      <span class="ms-auto text-sm font-weight-bold">80%</span>
+                    </div>
+                    <div>
+                      <div class="progress progress-md">
+                        <div class="progress-bar bg-primary w-80" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+                  <div class="w-100">
+                    <div class="d-flex mb-2">
+                      <span class="me-2 text-sm font-weight-bold text-dark">Neutral Reviews</span>
+                      <span class="ms-auto text-sm font-weight-bold">17%</span>
+                    </div>
+                    <div>
+                      <div class="progress progress-md">
+                        <div class="progress-bar bg-primary w-10" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+                  <div class="w-100">
+                    <div class="d-flex mb-2">
+                      <span class="me-2 text-sm font-weight-bold text-dark">Negative Reviews</span>
+                      <span class="ms-auto text-sm font-weight-bold">3%</span>
+                    </div>
+                    <div>
+                      <div class="progress progress-md">
+                        <div class="progress-bar bg-primary w-5" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer pt-0 p-3 d-flex align-items-center">
+              <div class="w-60">
+                <p class="text-sm">
+                  More than <b>1,500,000</b> developers used Creative Tim's products and over <b>700,000</b> projects were created.
+                </p>
+              </div>
+              <div class="w-40 text-end">
+                <a class="btn btn-dark mb-0 text-end" href="javascript:;">View all reviews</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-4">
+        <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+          <div class="card">
+            <div class="card-header pb-0">
+              <div class="row">
+                <div class="col-lg-6 col-7">
+                  <h6>Projects</h6>
+                  <p class="text-sm mb-0">
+                    <i class="fa fa-check text-info" aria-hidden="true"></i>
+                    <span class="font-weight-bold ms-1">30 done</span> this month
+                  </p>
+                </div>
+                <div class="col-lg-6 col-5 my-auto text-end">
+                  <div class="dropdown float-lg-end pe-4">
+                    <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-ellipsis-v text-secondary"></i>
                     </a>
+                    <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <ul class="nav navbar-nav navbar-right ">
-                    <li class="nav-notification nav-info">
-                        <a type="button" data-toggle="modal" data-target="#exampleModal" style="background-color: transparent;">
-                            <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
-                                    <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
-                                    <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
-                                </svg>
-                            </i>
-                        </a>
-                    </li>
-                    <li class="nav-login">
-                        <a href="#" data-toggle="modal" data-target="#modalLogin">Masuk</a>
-                    </li>
-                </ul>
+              </div>
             </div>
-        </div>
-    </header>
-
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'id'
-            }, 'google_translate_element');
-        }
-    </script>
-
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <section id="hero">
-        <div class="container">
-            <div class="block block-aspiration">
-                <div class="h2">Layanan Saran, Kritik, dan Pujian online</div>
-                <p>Sampaikan laporan Anda langsung kepada kami</p>
-                <hr>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Companies</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Members</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Budget</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Completion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/small-logos/logo-xd.svg" class="avatar avatar-sm me-3" alt="xd">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Soft UI XD Version</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="avatar-group mt-2">
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
+                            <img src="../assets/img/team-1.jpg" alt="team1">
+                          </a>
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
+                            <img src="../assets/img/team-2.jpg" alt="team2">
+                          </a>
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alexander Smith">
+                            <img src="../assets/img/team-3.jpg" alt="team3">
+                          </a>
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
+                            <img src="../assets/img/team-4.jpg" alt="team4">
+                          </a>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold"> $14,000 </span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold">60%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-60" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/small-logos/logo-atlassian.svg" class="avatar avatar-sm me-3" alt="atlassian">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Add Progress Track</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="avatar-group mt-2">
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
+                            <img src="../assets/img/team-2.jpg" alt="team5">
+                          </a>
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
+                            <img src="../assets/img/team-4.jpg" alt="team6">
+                          </a>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold"> $3,000 </span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold">10%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-10" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/small-logos/logo-slack.svg" class="avatar avatar-sm me-3" alt="team7">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Fix Platform Errors</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="avatar-group mt-2">
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
+                            <img src="../assets/img/team-3.jpg" alt="team8">
+                          </a>
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
+                            <img src="../assets/img/team-1.jpg" alt="team9">
+                          </a>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold"> Not set </span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold">100%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-success w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm me-3" alt="spotify">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Launch our Mobile App</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="avatar-group mt-2">
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
+                            <img src="../assets/img/team-4.jpg" alt="user1">
+                          </a>
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
+                            <img src="../assets/img/team-3.jpg" alt="user2">
+                          </a>
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alexander Smith">
+                            <img src="../assets/img/team-4.jpg" alt="user3">
+                          </a>
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
+                            <img src="../assets/img/team-1.jpg" alt="user4">
+                          </a>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold"> $20,500 </span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold">100%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-success w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/small-logos/logo-jira.svg" class="avatar avatar-sm me-3" alt="jira">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Add the New Pricing Page</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="avatar-group mt-2">
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
+                            <img src="../assets/img/team-4.jpg" alt="user5">
+                          </a>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold"> $500 </span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold">25%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/small-logos/logo-invision.svg" class="avatar avatar-sm me-3" alt="invision">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Redesign New Online Shop</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="avatar-group mt-2">
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
+                            <img src="../assets/img/team-1.jpg" alt="user6">
+                          </a>
+                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
+                            <img src="../assets/img/team-4.jpg" alt="user7">
+                          </a>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold"> $2,000 </span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold">40%</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+          </div>
         </div>
-        <svg width="100%" height="160px" viewBox="0 0 1300 160" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g>
-                <path d="M1300,160 L-5.68434189e-14,160 L-5.68434189e-14,119 C423.103102,41.8480501 1096.33049,180.773108 1300,98 L1300,160 Z" fill="#FFFFFF" fill-rule="nonzero"></path>
-                <path d="M129.77395,40.2373685 C292.925845,31.2149964 314.345174,146.772453 615.144273,151.135393 C915.94337,155.498333 1017.27057,40.8373289 1240.93447,40.8373289 C1262.89392,40.8373289 1282.20864,41.9705564 1299.18628,44.0144896 L1300,160 L-1.0658141e-14,160 L-1.0658141e-14,105 C31.4276111,70.4780448 73.5616946,43.3459311 129.77395,40.2373685 Z" fill="#FFFFFF" fill-rule="nonzero" opacity="0.3"></path>
-                <path d="M69.77395,60.2373685 C232.925845,51.2149964 314.345174,146.772453 615.144273,151.135393 C915.94337,155.498333 1017.27057,0.837328936 1240.93447,0.837328936 C1263.91283,0.837328936 1283.59768,0.606916225 1300,1 L1300,160 L-1.70530257e-13,160 L-9.9475983e-14,74 C-9.9475983e-14,74 36.9912359,62.0502671 69.77395,60.2373685 Z" fill="#FFFFFF" fill-rule="nonzero" opacity="0.3"></path>
-                <path d="M2.27373675e-13,68 C23.2194389,95.7701288 69.7555676,123.009338 207,125 C507.7991,129.36294 698.336099,22 922,22 C1047.38026,22 1198.02057,63.2171658 1300,101 L1300,160 L0,160 L2.27373675e-13,68 Z" fill="#FFFFFF" fill-rule="nonzero" opacity="0.3" transform="translate(650, 91) scale(-1, 1) translate(-650, -91) "></path>
-            </g>
-        </svg>
-    </section>
-
-    <section id="complaint-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 mg-b-40">
-
-                    <form data-request="complaint::onCreate" data-request-files data-request-flash class='complaint-form'>
-                        <input name="_token" type="hidden" value="IRgXpIEXror6JlKmRZ1TYakT9w7fgTuenQ9mT5MO">
-                        <input name="_session_key" type="hidden" value="vJ3x0TD0kcZZvL28I4bLyYfKYHHIOyuqz108PlbT">
-
-                        <div class="complaint-form-box">
-                            <div class="select-complaint">Sampaikan Laporan Anda</div>
-                            <label for="classification_complaint" class="choose-classification">Pilih Klasifikasi Laporan</label>
-                            <div class="btn-group btn-complaint-type" id="classification_complaint" data-toggle="buttons">
-                                <label attr-speach="PENGADUAN" class="btn btn-default">
-                                    <input attr-speach="PENGADUAN" type="radio" name="classification_id" value="1" class="sr-only" required /><span>SARAN</span></label>
-                                <label attr-speach="ASPIRASI" class="btn btn-default">
-                                    <input attr-speach="ASPIRASI" type="radio" name="classification_id" value="3" class="sr-only" required /><span>Kritik</span></label>
-                                <label attr-speach="PERMINTAAN INFORMASI" class="btn btn-default">
-                                    <input attr-speach="PERMINTAAN INFORMASI" type="radio" name="classification_id" value="2" class="sr-only" required /><span>PUJIAN</span></label>
-                            </div>
-                        </div>
-                        <div class="complaint-help">
-                            Perhatikan Cara Menyampaikan <span id="classfication_name">Pengaduan</span> Yang Baik dan Benar
-                            <a attr-speach="Perhatikan Cara Menyampaikan Pengaduan Yang Baik dan Benar" href="#modalPengaduan" data-toggle="modal" class="modalTrigger" id="modalToggler" data-modal-name="modalPengaduan" data-target="#bannerformmodal"><img attr-speach="Perhatikan Cara Menyampaikan Pengaduan Yang Baik dan Benar" alt="info-complaint" class="info-complaint" src="https://www.lapor.go.id/themes/lapor/assets/images/info.svg"></a>
-                        </div>
-                        <div class="complaint-form-category">
-                            <input attr-speach="Ketik Judul Laporan Anda" type="text" name="title" class="form-control" placeholder="Ketik Judul Laporan Anda *" required></textarea>
-                        </div>
-                        <div class="complaint-form-category">
-                            <textarea attr-speach="Ketik Isi Laporan Anda" name="content" id="" rows="6" class="form-control textarea-flex autosize" placeholder="Ketik Isi Laporan Anda *" required></textarea>
-                        </div>
-                        <div class="complaint-form-box p-5px" id="date_incident">
-                            <div class="form-group">
-                                <div class='input-group date'>
-                                    <input attr-speach="Pilih Tanggal Kejadian" type='text' id="date_of_incident" name="date_of_incident" required class="form-control input-doi" placeholder="Pilih Tanggal Kejadian *" autocomplete="off">
-                                    <span class="input-group-addon">
-                                        <span class="fa fa-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div attr-speach="Ketik Lokasi Kejadian" class="complaint-form-category">
-                            <select class="form-control" name="location_id" id="location_id" placeholder="Ketik Lokasi Kejadian *" data-request-search="complaint::onSearchLocation" required>
-                            </select>
-                        </div>
-                        {{-- <div attr-speach="Ketik Instansi Tujuan" class="complaint-form-category">
-                            <select
-                                class="form-control"
-                                name="suggestion_institution_id"
-                                id="select_institution_id"
-                                placeholder="Ketik Instansi Tujuan"
-                                data-request-search="complaint::onSearchInstitution"
-                                data-request="onSelectInstitution"
-                                data-request-success="updateCategories(data.categories)"
-                                data-request-data="institution_id: $('#select_institution_id').val()">
-                            </select>
-                        </div> --}}
-                        {{-- <div attr-speach="Pilih Kategori Laporan Anda" class="complaint-form-category">
-                            <select id="select_categories" class="select-tree-view" placeholder="Pilih Kategori Laporan Anda" name="category_id"></select>
-                        </div> --}}
-
-                        {{-- <div class="form-group">
-                            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-                            <input type="hidden" name="action" value="validate_captcha">
-                        </div> --}}
-
-                        {{-- <div class="complaint-form-attachments">
-                            <label for="fileInput" class="file-label">
-                                Upload Lampiran (Max 2MB)
-                            </label>
-                            <input type="file" name="attachment" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
-                            <div id="fileList" class=""></div>
-                        </div>
-
-                        <div class="complaint-form-footer">
-                            <div class="row-flex flex-align-between">
-                                <div class="footer-left">
-                                    <a attr-speach="Upload Lampiran" href="#" data-toggle="slidetoggle" data-target=".complaint-form-attachments">
-                                        <label attr-speach="Upload Lampiran" class="label label-primary">0</label>
-                                        <i attr-speach="Upload Lampiran" class="fa fa-fw fa-paperclip"></i> <span attr-speach="Upload Lampiran" class="label-attachment" data-toggle="tooltip" data-placement="top" data-title="Upload lampiran pendukung laporan Anda">Upload Lampiran</span>
-                                    </a>
-                                </div> --}}
-
-                                <div class="footer-right text-right">
-                                    <div class="checkbox checkbox-primary checkbox-circle checkbox-inline text-left" data-toggle="tooltip" data-placement="top" data-title="Nama Anda tidak akan terpublikasi pada laporan">
-                                        <input attr-speach="Anonim" id="anonim" class="styled" type="checkbox" name="is_anonymous">
-
-                                        <label attr-speach="Anonim" for="anonim">
-                                            Anonim
-                                        </label>
-                                    </div>
-
-                                    <div class="checkbox checkbox-primary checkbox-circle checkbox-inline text-left" data-toggle="tooltip" data-placement="top" data-title="Laporan Anda tidak dapat dilihat oleh publik">
-                                        <input attr-speach="Rahasia" id="Rahasia" class="styled" type="checkbox" name="is_secret">
-
-                                        <label attr-speach="Rahasia" for="Rahasia">
-                                            Rahasia
-                                        </label>
-                                    </div>
-
-                                    <!-- HELP Button -->
-
-                                    <input type="hidden" name="latitude" data-toggle="currentLatitude">
-                                    <input type="hidden" name="longitude" data-toggle="currentLongitude">
-                                    <input type="hidden" name="origin_latitude">
-                                    <input type="hidden" name="origin_longitude">
-                                    <a attr-speach="LAPOR" class="btn btn-primary" id="submit-complaint" data-attach-loading>Kirim</a>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- <div class="modal fade how-to" id="modalPengaduan" tabindex="-1" role="dialog" aria-labelledby="modalPengaduan" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header" style="padding: 15px;">
-                                    <button type="button" class="close" style="top: 11px;" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 class="modal-title">PANDUAN PENGISIAN PENGADUAN</h4>
-                                </div>
-                                <img src="https://www.lapor.go.id/themes/lapor/assets/images/how-to-pengaduan.jpg" width="100%">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade how-to" id="modalAspirasi" tabindex="-1" role="dialog" aria-labelledby="modalAspirasi" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header" style="padding: 15px;">
-                                    <button type="button" class="close" style="top: 11px;" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 class="modal-title">PANDUAN PENGISIAN ASPIRASI</h4>
-                                </div>
-                                <img src="https://www.lapor.go.id/themes/lapor/assets/images/how-to-aspirasi.jpg" width="100%">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade how-to" id="modalPermintaanInformasi" tabindex="-1" role="dialog" aria-labelledby="modalPermintaanInformasi" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header" style="padding: 15px;">
-                                    <button type="button" class="close" style="top: 11px;" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 class="modal-title">PANDUAN PENGISIAN PERMINTAAN INFORMASI</h4>
-                                </div>
-                                <img src="https://www.lapor.go.id/themes/lapor/assets/images/how-to-permintaan-informasi.jpg" width="100%">
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-                {{-- <div class="col-sm-12">
-                    <div class="row bs-wizard" style="border-bottom:0;">
-                        <div class="col-xs-2 col-xs-offset-1 bs-wizard-step active">
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <span class="bs-wizard-dot">
-                                <i class="fa fa-pencil-square-o"></i>
-                            </span>
-                            <div class="text-center bs-wizard-stepnum">Tulis Laporan</div>
-                            <div class="bs-wizard-info text-center">
-                                Laporkan keluhan atau aspirasi anda dengan jelas dan lengkap
-                            </div>
-                        </div>
-
-                        <div class="col-xs-2 bs-wizard-step">
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <span class="bs-wizard-dot">
-                                <i class="fa fa-mail-forward"></i>
-                            </span>
-                            <div class="text-center bs-wizard-stepnum">Proses Verifikasi</div>
-                            <div class="bs-wizard-info text-center">
-                                Dalam 3 hari, laporan Anda akan diverifikasi dan diteruskan kepada instansi berwenang
-                            </div>
-                        </div>
-
-                        <div class="col-xs-2 bs-wizard-step">
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <span class="bs-wizard-dot">
-                                <i class="fa fa-comments"></i>
-                            </span>
-                            <div class="text-center bs-wizard-stepnum">Proses Tindak Lanjut</div>
-                            <div class="bs-wizard-info text-center">
-                                Dalam 5 hari, instansi akan menindaklanjuti dan membalas laporan Anda
-                            </div>
-                        </div>
-
-                        <div class="col-xs-2 bs-wizard-step">
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <span class="bs-wizard-dot">
-                                <i class="fa fa-commenting-o"></i>
-                            </span>
-                            <div class="text-center bs-wizard-stepnum">Beri Tanggapan</div>
-                            <div class="bs-wizard-info text-center">
-                                Anda dapat menanggapi kembali balasan yang diberikan oleh instansi dalam waktu 10 hari
-                            </div>
-                        </div>
-
-                        <div class="col-xs-2 bs-wizard-step">
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <span class="bs-wizard-dot">
-                                <i class="fa fa-check"></i>
-                            </span>
-                            <div class="text-center bs-wizard-stepnum">Selesai</div>
-                            <div class="bs-wizard-info text-center">
-                                Laporan Anda akan terus ditindaklanjuti hingga terselesaikan
-                            </div>
-                        </div>
-
-                    </div>
-                </div> --}}
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <div class="card-header pb-0">
+              <h6>Orders overview</h6>
+              <p class="text-sm">
+                <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+                <span class="font-weight-bold">24%</span> this month
+              </p>
             </div>
-        </div>
-    </section>
-
-    <section class="block block-counter" id="hero" style="color:white; padding: 40px 0 40px;">
-        <div class="container">
-            <div class="text-center text-muted h3 mg-0 mg-b-30" style="color: white">JUMLAH LAPORAN SEKARANG</div>
-
-            <div class="row-flex flex-tablet text-center">
-                <div class="post post-counter" style="margin-left: auto;margin-right: auto;">
-                    <div class="counter-count">
-                        <!-- <span class="numscroller" data-min='0' data-max='966347' data-delay='2' data-increment='1000'></span> -->
-                        <span class="numscroller" data-min='0' data-max='959139' data-delay='2' data-increment='1000'></span>
-                    </div>
+            <div class="card-body p-3">
+              <div class="timeline timeline-one-side">
+                <div class="timeline-block mb-3">
+                  <span class="timeline-step">
+                    <i class="ni ni-bell-55 text-success text-gradient"></i>
+                  </span>
+                  <div class="timeline-content">
+                    <h6 class="text-dark text-sm font-weight-bold mb-0">$2400, Design changes</h6>
+                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 7:20 PM</p>
+                  </div>
                 </div>
+                <div class="timeline-block mb-3">
+                  <span class="timeline-step">
+                    <i class="ni ni-html5 text-danger text-gradient"></i>
+                  </span>
+                  <div class="timeline-content">
+                    <h6 class="text-dark text-sm font-weight-bold mb-0">New order #1832412</h6>
+                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 11 PM</p>
+                  </div>
+                </div>
+                <div class="timeline-block mb-3">
+                  <span class="timeline-step">
+                    <i class="ni ni-cart text-info text-gradient"></i>
+                  </span>
+                  <div class="timeline-content">
+                    <h6 class="text-dark text-sm font-weight-bold mb-0">Server payments for April</h6>
+                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 9:34 PM</p>
+                  </div>
+                </div>
+                <div class="timeline-block mb-3">
+                  <span class="timeline-step">
+                    <i class="ni ni-credit-card text-warning text-gradient"></i>
+                  </span>
+                  <div class="timeline-content">
+                    <h6 class="text-dark text-sm font-weight-bold mb-0">New card added for order #4395133</h6>
+                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">20 DEC 2:20 AM</p>
+                  </div>
+                </div>
+                <div class="timeline-block mb-3">
+                  <span class="timeline-step">
+                    <i class="ni ni-key-25 text-primary text-gradient"></i>
+                  </span>
+                  <div class="timeline-content">
+                    <h6 class="text-dark text-sm font-weight-bold mb-0">Unlock packages for development</h6>
+                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">18 DEC 4:54 AM</p>
+                  </div>
+                </div>
+                <div class="timeline-block">
+                  <span class="timeline-step">
+                    <i class="ni ni-money-coins text-dark text-gradient"></i>
+                  </span>
+                  <div class="timeline-content">
+                    <h6 class="text-dark text-sm font-weight-bold mb-0">New order #9583120</h6>
+                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">17 DEC</p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-
-    <div class="clearfix"></div>
-
-    <footer>
-        <div class="container">
-            <div class="post-footer">
-                <div class="footer-copyright">
-                    Copyright 2024. <a href="https://www.instagram.com/adoreyeux/" data-toggle="tooltip" title="Adore" target="_blank">Adore</a>. Hak cipta dilindungi Undang-Undang.
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-7 mb-lg-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="d-flex flex-column h-100">
+                    <p class="mb-1 pt-2 text-bold">Built by developers</p>
+                    <h5 class="font-weight-bolder">Soft UI Dashboard</h5>
+                    <p class="mb-5">From colors, cards, typography to complex elements, you will find the full documentation.</p>
+                    <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
+                      Read More
+                      <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                    </a>
+                  </div>
                 </div>
+                <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+                  <div class="bg-primary border-radius-lg h-100">
+                    <img src="../assets/img/shapes/waves-white.svg" class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
+                    <div class="position-relative d-flex align-items-center justify-content-center h-100">
+                      <img class="w-100 position-relative z-index-2 pt-4" src="../assets/img/illustrations/rocket-white.png" alt="rocket">
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
- 
-    <form method="POST" action="https://www.lapor.go.id" accept-charset="UTF-8" data-request="laporAuth::onSignin" data-request-update="&#039;captcha-login&#039;: &#039;#google-captcha&#039;"><input name="_session_key" type="hidden" value="vJ3x0TD0kcZZvL28I4bLyYfKYHHIOyuqz108PlbT"><input name="_token" type="hidden" value="IRgXpIEXror6JlKmRZ1TYakT9w7fgTuenQ9mT5MO">
-        <div class="modal fade" id="modalLogin">
-            <div class="modal-dialog modal-md">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title text-center">MASUK</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2">
-                                <!-- <h5 class="separator"><span>Gunakan Akun Media Sosial Anda</span></h5>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <a href="?s=https://www.lapor.go.id&f=https://www.lapor.go.id" class="btn btn-block btn-facebook mg-b-20">
-                                            <i class="fa fa-facebook fa-fw"></i> Facebook
-                                        </a>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <a href="?s=https://www.lapor.go.id&f=https://www.lapor.go.id" class="btn btn-block btn-twitter mg-b-20">
-                                            <i class="fa fa-twitter fa-fw"></i> Twitter
-                                        </a>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <a href="https://www.lapor.go.id/flynsarmy/sociallogin/Google?s=https://www.lapor.go.id&f=https://www.lapor.go.id" class="btn btn-block btn-google mg-b-20">
-                                            <i class="fa fa-google fa-fw"></i> Google
-                                        </a>
-                                    </div>
-                                </div>
-                                <h5 class="separator"><span>Atau dengan Email Anda</span></h5> -->
-                                <div class="form-group">
-                                    <label for="userSigninLogin">Email, No. telp, atau username</label>
-                                    <input
-                                        name="login"
-                                        type="text"
-                                        class="form-control"
-                                        id="userSigninLogin"
-                                        tabindex="1"
-                                        required>
-                                </div>
-                                <div class="form-group">
-                                    <a href="https://www.lapor.go.id/forgot-password" class="pull-right">Lupa password?</a>
-                                    <label for="userSigninPassword">Password</label>
-                                    <input
-                                        name="password"
-                                        type="password"
-                                        autocomplete="off"
-                                        class="form-control"
-                                        id="userSigninPassword"
-                                        tabindex="2"
-                                        required>
-                                </div>
-                                <div id="google-captcha"></div>
-                                <div class="form-group">
-                                    <button class="btn btn-primary btn-block" data-attach-loading>Masuk</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer clearfix" style="text-align: center">
-                        Anda belum memiliki akun?<br><a class="btn btn-link" href="https://www.lapor.go.id/account/register">Daftar Sekarang</a>
-                    </div>
-                </div>
+        <div class="col-lg-5">
+          <div class="card h-100 p-3">
+            <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('../assets/img/ivancik.jpg');">
+              <span class="mask bg-gradient-dark"></span>
+              <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
+                <h5 class="text-white font-weight-bolder mb-4 pt-2">Work with the rockets</h5>
+                <p class="text-white">Wealth creation is an evolutionarily recent positive-sum game. It is all about who take the opportunity first.</p>
+                <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
+                  Read More
+                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </form>
-    <div class="modal fade" id="modalMap">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title text-center">Pilih Lokasi</h4>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-5 mb-lg-0 mb-4">
+          <div class="card z-index-2">
+            <div class="card-body p-2">
+              <div class="bg-dark border-radius-md py-3 pe-1 mb-3">
+                <div class="chart">
+                  <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
                 </div>
-                <div class="modal-body pd-0">
-                    <input type="hidden" data-toggle="locationMarkerLatitude">
-                    <input type="hidden" data-toggle="locationMarkerLongitude">
-                    <div class="location-marker"><img src="https://www.lapor.go.id/themes/lapor/assets/images/complaint-marker.png" alt="" height="70"></div>
-
-                    <div class="location-name bg-warning pd-10 text-ellipsis">
-                        <span data-toggle="locationName">Geser map untuk mendapatkan lokasi yang anda inginkan</span>
+              </div>
+              <h6 class="ms-2 mt-4 mb-0"> Active Users </h6>
+              <p class="text-sm ms-2"> (<span class="font-weight-bolder">+23%</span>) than last week </p>
+              <div class="container border-radius-lg">
+                <div class="row">
+                  <div class="col-3 py-3 ps-0">
+                    <div class="d-flex mb-2">
+                      <div class="icon icon-shape icon-xxs shadow border-radius-sm bg-primary text-center me-2 d-flex align-items-center justify-content-center">
+                        <svg width="10px" height="10px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>document</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-1870.000000, -591.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                              <g transform="translate(1716.000000, 291.000000)">
+                                <g transform="translate(154.000000, 300.000000)">
+                                  <path class="color-background" d="M40,40 L36.3636364,40 L36.3636364,3.63636364 L5.45454545,3.63636364 L5.45454545,0 L38.1818182,0 C39.1854545,0 40,0.814545455 40,1.81818182 L40,40 Z" opacity="0.603585379"></path>
+                                  <path class="color-background" d="M30.9090909,7.27272727 L1.81818182,7.27272727 C0.814545455,7.27272727 0,8.08727273 0,9.09090909 L0,41.8181818 C0,42.8218182 0.814545455,43.6363636 1.81818182,43.6363636 L30.9090909,43.6363636 C31.9127273,43.6363636 32.7272727,42.8218182 32.7272727,41.8181818 L32.7272727,9.09090909 C32.7272727,8.08727273 31.9127273,7.27272727 30.9090909,7.27272727 Z M18.1818182,34.5454545 L7.27272727,34.5454545 L7.27272727,30.9090909 L18.1818182,30.9090909 L18.1818182,34.5454545 Z M25.4545455,27.2727273 L7.27272727,27.2727273 L7.27272727,23.6363636 L25.4545455,23.6363636 L25.4545455,27.2727273 Z M25.4545455,20 L7.27272727,20 L7.27272727,16.3636364 L25.4545455,16.3636364 L25.4545455,20 Z"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <p class="text-xs mt-1 mb-0 font-weight-bold">Users</p>
                     </div>
-                    <div id="mapLocation">
-                        <center class="pd-10">Silahkan aktifkan fitur pelacakan lokasi Anda pada browser</center>
+                    <h4 class="font-weight-bolder">36K</h4>
+                    <div class="progress w-75">
+                      <div class="progress-bar bg-dark w-60" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
+                  </div>
+                  <div class="col-3 py-3 ps-0">
+                    <div class="d-flex mb-2">
+                      <div class="icon icon-shape icon-xxs shadow border-radius-sm bg-gradient-info text-center me-2 d-flex align-items-center justify-content-center">
+                        <svg width="10px" height="10px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>spaceship</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-1720.000000, -592.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                              <g transform="translate(1716.000000, 291.000000)">
+                                <g transform="translate(4.000000, 301.000000)">
+                                  <path class="color-background" d="M39.3,0.706666667 C38.9660984,0.370464027 38.5048767,0.192278529 38.0316667,0.216666667 C14.6516667,1.43666667 6.015,22.2633333 5.93166667,22.4733333 C5.68236407,23.0926189 5.82664679,23.8009159 6.29833333,24.2733333 L15.7266667,33.7016667 C16.2013871,34.1756798 16.9140329,34.3188658 17.535,34.065 C17.7433333,33.98 38.4583333,25.2466667 39.7816667,1.97666667 C39.8087196,1.50414529 39.6335979,1.04240574 39.3,0.706666667 Z M25.69,19.0233333 C24.7367525,19.9768687 23.3029475,20.2622391 22.0572426,19.7463614 C20.8115377,19.2304837 19.9992882,18.0149658 19.9992882,16.6666667 C19.9992882,15.3183676 20.8115377,14.1028496 22.0572426,13.5869719 C23.3029475,13.0710943 24.7367525,13.3564646 25.69,14.31 C26.9912731,15.6116662 26.9912731,17.7216672 25.69,19.0233333 L25.69,19.0233333 Z"></path>
+                                  <path class="color-background" d="M1.855,31.4066667 C3.05106558,30.2024182 4.79973884,29.7296005 6.43969145,30.1670277 C8.07964407,30.6044549 9.36054508,31.8853559 9.7979723,33.5253085 C10.2353995,35.1652612 9.76258177,36.9139344 8.55833333,38.11 C6.70666667,39.9616667 0,40 0,40 C0,40 0,33.2566667 1.855,31.4066667 Z"></path>
+                                  <path class="color-background" d="M17.2616667,3.90166667 C12.4943643,3.07192755 7.62174065,4.61673894 4.20333333,8.04166667 C3.31200265,8.94126033 2.53706177,9.94913142 1.89666667,11.0416667 C1.5109569,11.6966059 1.61721591,12.5295394 2.155,13.0666667 L5.47,16.3833333 C8.55036617,11.4946947 12.5559074,7.25476565 17.2616667,3.90166667 L17.2616667,3.90166667 Z" opacity="0.598539807"></path>
+                                  <path class="color-background" d="M36.0983333,22.7383333 C36.9280725,27.5056357 35.3832611,32.3782594 31.9583333,35.7966667 C31.0587397,36.6879974 30.0508686,37.4629382 28.9583333,38.1033333 C28.3033941,38.4890431 27.4704606,38.3827841 26.9333333,37.845 L23.6166667,34.53 C28.5053053,31.4496338 32.7452344,27.4440926 36.0983333,22.7383333 L36.0983333,22.7383333 Z" opacity="0.598539807"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <p class="text-xs mt-1 mb-0 font-weight-bold">Clicks</p>
+                    </div>
+                    <h4 class="font-weight-bolder">2m</h4>
+                    <div class="progress w-75">
+                      <div class="progress-bar bg-dark w-90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="col-3 py-3 ps-0">
+                    <div class="d-flex mb-2">
+                      <div class="icon icon-shape icon-xxs shadow border-radius-sm bg-gradient-warning text-center me-2 d-flex align-items-center justify-content-center">
+                        <svg width="10px" height="10px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>credit-card</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                              <g transform="translate(1716.000000, 291.000000)">
+                                <g transform="translate(453.000000, 454.000000)">
+                                  <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
+                                  <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <p class="text-xs mt-1 mb-0 font-weight-bold">Sales</p>
+                    </div>
+                    <h4 class="font-weight-bolder">435$</h4>
+                    <div class="progress w-75">
+                      <div class="progress-bar bg-dark w-30" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="col-3 py-3 ps-0">
+                    <div class="d-flex mb-2">
+                      <div class="icon icon-shape icon-xxs shadow border-radius-sm bg-gradient-danger text-center me-2 d-flex align-items-center justify-content-center">
+                        <svg width="10px" height="10px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>settings</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-2020.000000, -442.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                              <g transform="translate(1716.000000, 291.000000)">
+                                <g transform="translate(304.000000, 151.000000)">
+                                  <polygon class="color-background" opacity="0.596981957" points="18.0883333 15.7316667 11.1783333 8.82166667 13.3333333 6.66666667 6.66666667 0 0 6.66666667 6.66666667 13.3333333 8.82166667 11.1783333 15.315 17.6716667"></polygon>
+                                  <path class="color-background" d="M31.5666667,23.2333333 C31.0516667,23.2933333 30.53,23.3333333 30,23.3333333 C29.4916667,23.3333333 28.9866667,23.3033333 28.48,23.245 L22.4116667,30.7433333 L29.9416667,38.2733333 C32.2433333,40.575 35.9733333,40.575 38.275,38.2733333 L38.275,38.2733333 C40.5766667,35.9716667 40.5766667,32.2416667 38.275,29.94 L31.5666667,23.2333333 Z" opacity="0.596981957"></path>
+                                  <path class="color-background" d="M33.785,11.285 L28.715,6.215 L34.0616667,0.868333333 C32.82,0.315 31.4483333,0 30,0 C24.4766667,0 20,4.47666667 20,10 C20,10.99 20.1483333,11.9433333 20.4166667,12.8466667 L2.435,27.3966667 C0.95,28.7083333 0.0633333333,30.595 0.00333333333,32.5733333 C-0.0583333333,34.5533333 0.71,36.4916667 2.11,37.89 C3.47,39.2516667 5.27833333,40 7.20166667,40 C9.26666667,40 11.2366667,39.1133333 12.6033333,37.565 L27.1533333,19.5833333 C28.0566667,19.8516667 29.01,20 30,20 C35.5233333,20 40,15.5233333 40,10 C40,8.55166667 39.685,7.18 39.1316667,5.93666667 L33.785,11.285 Z"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <p class="text-xs mt-1 mb-0 font-weight-bold">Items</p>
+                    </div>
+                    <h4 class="font-weight-bolder">43</h4>
+                    <div class="progress w-75">
+                      <div class="progress-bar bg-dark w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="modal-footer">
-                    <div class="text-center">
-                        <button class="btn btn-default" data-dismiss="modal">Tutup</button>
-                        <button class="btn btn-danger" data-dismiss="modal" data-toggle="removeLocation">Hapus Lokasi</button>
-                        <button class="btn btn-info" data-dismiss="modal">Pilih Lokasi</button>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="col-lg-7">
+          <div class="card z-index-2">
+            <div class="card-header pb-0">
+              <h6>Sales overview</h6>
+              <p class="text-sm">
+                <i class="fa fa-arrow-up text-success"></i>
+                <span class="font-weight-bold">4% more</span> in 2021
+              </p>
+            </div>
+            <div class="card-body p-3">
+              <div class="chart">
+                <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer pt-3  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>,
+                made with <i class="fa fa-heart"></i> by
+                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
+                for a better web.
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                <li class="nav-item">
+                  <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+  </main>
+  <div class="fixed-plugin">
+    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
+      <i class="fa fa-cog py-2"> </i>
+    </a>
+    <div class="card shadow-lg ">
+      <div class="card-header pb-0 pt-3 ">
+        <div class="float-start">
+          <h5 class="mt-3 mb-0">Soft UI Configurator</h5>
+          <p>See our dashboard options.</p>
+        </div>
+        <div class="float-end mt-4">
+          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+            <i class="fa fa-close"></i>
+          </button>
+        </div>
+        <!-- End Toggle Button -->
+      </div>
+      <hr class="horizontal dark my-1">
+      <div class="card-body pt-sm-3 pt-0">
+        <!-- Sidebar Backgrounds -->
+        <div>
+          <h6 class="mb-0">Sidebar Colors</h6>
+        </div>
+        <a href="javascript:void(0)" class="switch-trigger background-color">
+          <div class="badge-colors my-2 text-start">
+            <span class="badge filter bg-primary active" data-color="primary" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+          </div>
+        </a>
+        <!-- Sidenav Type -->
+        <div class="mt-3">
+          <h6 class="mb-0">Sidenav Type</h6>
+          <p class="text-sm">Choose between 2 different sidenav types.</p>
+        </div>
+        <div class="d-flex">
+          <button class="btn btn-primary w-100 px-3 mb-2 active" data-class="bg-transparent" onclick="sidebarType(this)">Transparent</button>
+          <button class="btn btn-primary w-100 px-3 mb-2 ms-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
+        </div>
+        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
+        <!-- Navbar Fixed -->
+        <div class="mt-3">
+          <h6 class="mb-0">Navbar Fixed</h6>
+        </div>
+        <div class="form-check form-switch ps-0">
+          <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
+        </div>
+        <hr class="horizontal dark my-sm-4">
+        <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/soft-ui-dashboard">Free Download</a>
+        <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/license/soft-ui-dashboard">View documentation</a>
+        <div class="w-100 text-center">
+          <a class="github-button" href="https://github.com/creativetimofficial/soft-ui-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/soft-ui-dashboard on GitHub">Star</a>
+          <h6 class="mt-3">Thank you for sharing!</h6>
+          <a href="https://twitter.com/intent/tweet?text=Check%20Soft%20UI%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+            <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
+          </a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/soft-ui-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+            <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="{{asset('softui/assets/js/core/popper.min.js')}}"></script>
+  <script src="{{asset('softui/assets/js/core/bootstrap.min.js')}}"></script>
+  <script src="{{asset('softui/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
+  <script src="{{asset('softui/assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
+  <script src="{{asset('softui/assets/js/plugins/chartjs.min.js')}}"></script>
+  <script>
+    var ctx = document.getElementById("chart-bars").getContext("2d");
+
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        datasets: [{
+          label: "Sales",
+          tension: 0.4,
+          borderWidth: 0,
+          borderRadius: 4,
+          borderSkipped: false,
+          backgroundColor: "#fff",
+          data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
+          maxBarThickness: 6
+        }, ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+            },
+            ticks: {
+              suggestedMin: 0,
+              suggestedMax: 500,
+              beginAtZero: true,
+              padding: 15,
+              font: {
+                size: 14,
+                family: "Inter",
+                style: 'normal',
+                lineHeight: 2
+              },
+              color: "#fff"
+            },
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false
+            },
+            ticks: {
+              display: false
+            },
+          },
+        },
+      },
+    });
 
 
-    <div class="loadedcontentmodal"></div>
+    var ctx2 = document.getElementById("chart-line").getContext("2d");
 
-    <script src="https://code.responsivevoice.org/responsivevoice.js?key=bzbTAKXD"></script>
-    <script type="text/javascript" src="https://web.animemusic.us/widget_disabilitas.js"></script>
-    <script src="https://www.lapor.go.id/combine/84c55bf60c3c9ba06444003c2ae36965-1732462798"></script>
-    <script src="https://www.lapor.go.id/plugins/responsiv/uploader/assets/vendor/dropzone/dropzone.js"></script>
-    <script src="https://www.lapor.go.id/plugins/responsiv/uploader/assets/js/uploader.js"></script>
-    <script src="https://www.lapor.go.id/themes/lapor/assets/select2/js/select2.min.js"></script>
-    <script src="https://www.lapor.go.id/themes/lapor/assets/select2/js/select2totree.js"></script>
-    <script>
-        $("#showLaporan").bind("click", function() {
-            var down = "https://www.lapor.go.id/themes/lapor/assets/images/dropdown.png";
-            var up = "https://www.lapor.go.id/themes/lapor/assets/images/dropup.png";
-            var img = $('#laporanImg')
-            var src = img.attr("src"),
-                state = (src.indexOf(down) === 0) ? down : up;
-            (state === down) ? src = src.replace(down, up): src = src.replace(up, down);
-            img.attr("src", src);
+    var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
 
-        });
-    </script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LceKsUpAAAAADvBLbPsuB4Q6_WEdA2siNPXW8Hq"></script>
-    <script>
-        function GetURLParameter(sParam) {
-            var sPageURL = window.location.search.substring(1);
-            var sURLVariables = sPageURL.split('&');
-            for (var i = 0; i < sURLVariables.length; i++) {
-                var sParameterName = sURLVariables[i].split('=');
-                if (sParameterName[0] == sParam) {
-                    return decodeURIComponent(sParameterName[1]);
-                }
+    gradientStroke1.addColorStop(1, 'rgba(203,12,159,0.2)');
+    gradientStroke1.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+    gradientStroke1.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
+
+    var gradientStroke2 = ctx2.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
+    gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+    gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
+
+    new Chart(ctx2, {
+      type: "line",
+      data: {
+        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        datasets: [{
+            label: "Mobile apps",
+            tension: 0.4,
+            borderWidth: 0,
+            pointRadius: 0,
+            borderColor: "#cb0c9f",
+            borderWidth: 3,
+            backgroundColor: gradientStroke1,
+            fill: true,
+            data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+            maxBarThickness: 6
+
+          },
+          {
+            label: "Websites",
+            tension: 0.4,
+            borderWidth: 0,
+            pointRadius: 0,
+            borderColor: "#3A416F",
+            borderWidth: 3,
+            backgroundColor: gradientStroke2,
+            fill: true,
+            data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+            maxBarThickness: 6
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [5, 5]
+            },
+            ticks: {
+              display: true,
+              padding: 10,
+              color: '#b2b9bf',
+              font: {
+                size: 11,
+                family: "Inter",
+                style: 'normal',
+                lineHeight: 2
+              },
             }
-        }
-
-        $(document).ready(function() {
-            const fileInput = document.getElementById('fileInput');
-            const fileList = document.getElementById('fileList');
-            const form = document.getElementsByClassName('complaint-form')[0];
-            const fileCountLabel = document.querySelector('label[attr-speach="Upload Lampiran"]')
-            let uploadedFiles = [];
-            const getCat = GetURLParameter('category');
-
-            // Function to upload files
-            fileInput.addEventListener('change', function() {
-                Array.from(fileInput.files).forEach(file => {
-                    if (file.size > 2 * 1024 * 1024) {
-                        showError('File ' + file.name + ' terlalu besar. Maksimum ukuran file adalah 2 MB.');
-                        return;
-                    }
-                    if (!uploadedFiles.some(uploadedFile => uploadedFile.name === file.name)) {
-                        uploadedFiles.push(file);
-                        const fileItem = createFileItem(file);
-                        fileList.appendChild(fileItem);
-                    }
-                });
-
-                updateCountLabel();
-            });
-
-            function createFileItem(file) {
-                const fileItem = document.createElement('div');
-                fileItem.classList.add('file-item');
-
-                const fileName = document.createElement('div');
-                fileName.classList.add('file-name');
-                fileName.textContent = file.name;
-
-                const deleteButton = document.createElement('button');
-                deleteButton.classList.add('delete-button');
-                deleteButton.textContent = '❌';
-                deleteButton.addEventListener('click', function() {
-                    fileList.removeChild(fileItem);
-                    uploadedFiles = uploadedFiles.filter(uploadedFile => uploadedFile.name !== file.name);
-                    fileInput.value = '';
-                    updateCountLabel();
-                });
-
-                fileItem.appendChild(fileName);
-                fileItem.appendChild(deleteButton);
-
-                return fileItem;
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+              borderDash: [5, 5]
+            },
+            ticks: {
+              display: true,
+              color: '#b2b9bf',
+              padding: 20,
+              font: {
+                size: 11,
+                family: "Inter",
+                style: 'normal',
+                lineHeight: 2
+              },
             }
-
-            function updateCountLabel() {
-                const labelValue = uploadedFiles.length > 0 ? uploadedFiles.length : 0;
-                fileCountLabel.textContent = labelValue;
-            }
-
-            function showError(message) {
-                $.oc.flashMsg({
-                    text: message,
-                    'class': 'error',
-                    interval: 5
-                });
-            }
-
-            function addFiles() {
-                fileInput.remove();
-                const existingNewFilesInput = document.querySelector('input[name="attachment[]"]');
-                if (existingNewFilesInput) {
-                    existingNewFilesInput.remove();
-                }
-
-                const newFilesInput = document.createElement('input');
-                newFilesInput.type = 'file';
-                newFilesInput.name = 'attachment[]';
-                newFilesInput.multiple = true;
-                newFilesInput.style.display = 'none';
-
-                const newFileList = new DataTransfer();
-
-                uploadedFiles.forEach(file => {
-                    newFileList.items.add(file);
-                });
-
-                newFilesInput.files = newFileList.files;
-                form.appendChild(newFilesInput);
-            }
-
-            // Function to execute reCAPTCHA & submit
-            function executeRecaptcha() {
-                grecaptcha.ready(function() {
-                    grecaptcha.execute('6LceKsUpAAAAADvBLbPsuB4Q6_WEdA2siNPXW8Hq', {
-                            action: 'validate_captcha'
-                        })
-                        .then(function(token) {
-                            document.getElementById('g-recaptcha-response').value = token;
-                            $(".complaint-form").submit();
-                        });
-                });
-            }
-
-            // submit form
-            $(".complaint-form #submit-complaint").click(function(event) {
-                event.preventDefault();
-
-                var form = $(".complaint-form")[0];
-                if (form.checkValidity()) {
-                    button_submit = $(this);
-                    button_submit.addClass('oc-loading');
-                    $('#select_categories').attr('disabled', false);
-
-                    executeRecaptcha(); // Eksekusi reCAPTCHA
-                    form.submit();
-                } else {
-                    $.oc.flashMsg({
-                        text: 'Form tidak valid, silakan periksa kembali',
-                        'class': 'error',
-                        interval: 3
-                    });
-                    form.reportValidity();
-                }
-
-                button_submit.removeClass('oc-loading');
-            });
-
-            initCategories();
-        });
-
-        // function initCategories
-        function initCategories() {
-            $("#select_categories").select2ToTree({
-                treeData: {
-                    dataArr: mydata
-                },
-                allowClear: true,
-                placeholder: "Pilih Kategori Laporan Anda",
-                positionDropdown: true,
-                autoClose: false,
-            });
-
-            $('#select_categories').val('').change();
-
-            if (getCat) {
-                $('#select_categories').val(getCat);
-                $('#select_categories').trigger('change');
-                $('#select_categories').attr('disabled', 'disabled');
-            };
-        }
-
-        function updateCategories(categories) {
-            try {
-                // Parsing JSON jika masih berupa string
-                var newcategories = typeof categories === 'string' ? JSON.parse(categories) : categories;
-
-                // Cek apakah newcategories array kosong
-                if (Array.isArray(newcategories) && newcategories.length === 0) {
-                    // Jika array kosong, panggil kembali initCategories
-                    initCategories();
-                } else {
-                    // Reset dan kosongkan elemen select
-                    $("#select_categories").empty();
-
-                    // Jika newcategories ada, gunakan data baru untuk select2ToTree
-                    $("#select_categories").select2ToTree({
-                        treeData: {
-                            dataArr: newcategories
-                        },
-                        allowClear: true,
-                        placeholder: "Pilih Kategori Laporan Anda",
-                        positionDropdown: true,
-                        autoClose: false,
-                    });
-
-                    $('#select_categories').val('').change();
-                    if (getCat) {
-                        $('#select_categories').val(getCat);
-                        $('#select_categories').trigger('change');
-                        $('#select_categories').attr('disabled', 'disabled');
-                    }
-                }
-            } catch (error) {
-                console.error('Failed to parse categories:', error);
-            }
-        };
-    </script>
-    <script src="https://www.lapor.go.id/combine/42e47feb8f9b1bf0c15183fff5563157-1732462797"></script>
-    <script>
-        var swiper = new Swiper('.swiper-primary', {
-            initialSlide: 1,
-            pagination: '.swiper-pagination',
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            scrollbarHide: true,
-            loop: true,
-            autoplay: 4000,
-            spaceBetween: 80,
-            paginationClickable: true,
-            breakpoints: {
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                }
-            }
-        });
-
-        var swiper = new Swiper('.swiper-social-feed', {
-            initialSlide: 4,
-            slidesPerView: 'auto',
-            scrollbarHide: true,
-            loop: true,
-            autoplay: 4000,
-            spaceBetween: 20,
-            direction: 'vertical',
-        });
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBLHjAqc9z24spcOJmit4weWYBe32eLBho&libraries=places, geometry&region=ID"></script>
-    <script src="https://cdn.klokantech.com/maptilerlayer/v1/index.js"></script>
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-134274968-1', 'auto');
-        ga('set', 'forceSSL', true);
-        ga('send', 'pageview');
-    </script>
-    <script>
-    </script>
-    <script>
-        function displaytranslate() {
-            var a = document.getElementById('translate');
-            if (a.style.display == 'none') {
-                a.style.display = 'block';
-            }
-            if (a.style.display == 'block') {
-                a.style.display = 'none';
-            }
-        }
-    </script>
-    <script src="https://www.lapor.go.id/themes/lapor/assets/dashboard/leaflet/leaflet.js"></script>
-    <script src="https://www.lapor.go.id/themes/lapor/assets/dashboard/leaflet/leaflet-providers-master/leaflet-providers.js"></script>
-    <script src="https://www.lapor.go.id/themes/lapor/assets/dashboard/leaflet/leaflet.ajax.min.js"></script>
+          },
+        },
+      },
+    });
+  </script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="{{asset('softui/assets/js/soft-ui-dashboard.min.js?v=1.1.0')}}"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8ef15e335fbacdec","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.5","token":"1b7cbb72744b40c580f8633c6b62637e"}' crossorigin="anonymous"></script>
 </body>
 
 </html>
