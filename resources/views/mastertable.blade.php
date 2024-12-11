@@ -3,13 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home</title>
+  <title>Table</title>
      @include('frontend.style')
 </head>
 
-<body class="hold-transition register-page">
-        @include('frontend.sidebar')
-        @include('frontend.navbar')
-    </div>
+<body>
+        
+        @include('frontend.sidebar') 
+
+        @include('frontend.js')
+
+        @include('frontend.table')
+      
 </body>
 </html>
