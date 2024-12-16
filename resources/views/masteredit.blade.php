@@ -3,14 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Table</title>
+  <title>Edit</title>
      @include('backend.style')
 </head>
 
 <body>
-        @include('backend.sidebar') 
-        @include('backend.js')
-        @include('backend.table')
-
+        
+    @include('backend.js')
+    @include('backend.sidebar')
+    @include('backend.edit')
+ 
+        
 </body>
 </html>

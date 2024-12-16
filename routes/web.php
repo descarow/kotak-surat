@@ -1,21 +1,28 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Saran;
 
-Route::get('/dashboard', function () {
+
+Route::get('/', function () {
     return view('masterdash');
 });
 
-Route::get('/login', function () {
-    return view('masterlogin');
+route::get('/reg', [AuthController::class, 'showRegistration'])->name('reg');
+route::post('/reg/submit', [AuthController::class, 'submitRegistration'])->name('submit');
+
+route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+route::post('/login/submit', [AuthController::class, 'submitLogin'])->name('logmit');
+
+Route::get('/edit', function () {
+    return view('masteredit');
 });
 
-Route::get('/reg', function () {
-    return view('masterreg');
-});
+Route::get('/detail', function () {
+    return view('masterdetail');
+}); 
 
-Route::get('/table', function () {
-    return view('mastertable');
-});
-
-// route::get('/', [HomeController::class, 'index']);
+route::get('/table', [BlogController::class, 'index'])->name('table');
+route::get('/delete/{id}',[BlogController::class, 'delete'])->name('delete');

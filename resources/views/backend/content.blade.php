@@ -3,19 +3,19 @@
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
         <div class="container-fluid py-1 px-3">
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            {{-- <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
               <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
               <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
-            </ol>
-            <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+            </ol> --}}
+            <h1 class="font-weight-bolder mb-0">Dashboard</h1>
           </nav>
-          <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          {{-- <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
             <div class="ms-md-auto pe-md-3 d-flex align-items-center">
               <div class="input-group">
                 <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
                 <input type="text" class="form-control" placeholder="Type here...">
               </div>
-            </div>
+            </div> --}}
             <ul class="navbar-nav  justify-content-end">
               {{-- <li class="nav-item d-flex align-items-center">
                 <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="https://www.creative-tim.com/builder?ref=navbar-soft-ui-dashboard">Online Builder</a>
@@ -126,16 +126,15 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Saran Hari Ini</p>
-                    <h5 class="font-weight-bolder mb-0">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Saran</p>
+                    <h5 class="text-success font-weight-bolder mb-0">
                       3.000
-                      <span class="text-success text-sm font-weight-bolder">+55%</span>
                     </h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="ni ni-like-2 text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -148,16 +147,15 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Kritik Hari Ini</p>
-                    <h5 class="font-weight-bolder mb-0">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Kritik</p>
+                    <h5 class="text-danger font-weight-bolder mb-0">
                       200
-                      <span class="text-danger text-sm font-weight-bolder">-3%</span>
                     </h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="ni ni-chat-round text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -170,16 +168,15 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Pujian Hari Ini</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      +800
-                      <span class="text-success text-sm font-weight-bolder">+28%</span>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Pujian</p>
+                    <h5 class="text-success font-weight-bolder mb-0">
+                      800
                     </h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="ni ni-satisfied text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -194,14 +191,14 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-capitalize font-weight-bold">Total</p>
                     <h5 class="font-weight-bolder mb-0">
-                      123.000
+                      1.234
                       {{-- <span class="text-success text-sm font-weight-bolder">+5%</span> --}}
                     </h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="ni ni-chart-bar-32 text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>

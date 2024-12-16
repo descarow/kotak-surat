@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Saran;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
     public function index(){
-        return view('welcome');
+        $data_saran = Saran::get();
+        return view('mastertable', compact('data_saran'));
+    }
+
+    public function delete($id){
+        $data_saran = Saran::findorfail($id);
+        $data_saran->delete();
+        return redirect()->route('table');
     }
 }
