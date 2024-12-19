@@ -17,4 +17,13 @@ class BlogController extends Controller
         $data_saran->delete();
         return redirect()->route('table');
     }
+
+    public function user(){
+        return view('frontend.user');
+    }
+
+    public function submitUser (Request $request) {
+        Saran::create($request->all());
+        return redirect()->route('user');
+    }
 }

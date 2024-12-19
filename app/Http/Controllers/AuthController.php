@@ -19,7 +19,7 @@ class AuthController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
         // dd($user);  
-        return redirect()->route('login');
+        return redirect()->route('table');
     }  
 
     public function showLogin() {
@@ -31,9 +31,17 @@ class AuthController extends Controller
 
         if (Auth::attempt($data)) {
             $request->session()->regenerate();
+            if (Auth::user()->role == 'user') {
+                return redirect()->route('user');
+            }
             return redirect()->route('table');
         } else {
             return redirect()->back()->with('failed', 'Your Email or Password is Incorrect'); 
         }
+    }
+
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('login');
     }
 }

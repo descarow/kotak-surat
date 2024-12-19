@@ -16,13 +16,15 @@ route::post('/reg/submit', [AuthController::class, 'submitRegistration'])->name(
 route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 route::post('/login/submit', [AuthController::class, 'submitLogin'])->name('logmit');
 
-Route::get('/edit', function () {
-    return view('masteredit');
-});
+route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/detail', function () {
     return view('masterdetail');
 }); 
 
+route::get('/user', [BlogController::class, 'User'])->name('user');
+route::post('/user/submit', [BlogController::class, 'submitUser'])->name('sermit');
+
 route::get('/table', [BlogController::class, 'index'])->name('table');
 route::get('/delete/{id}',[BlogController::class, 'delete'])->name('delete');
+

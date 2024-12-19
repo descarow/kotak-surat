@@ -7,7 +7,7 @@
               <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
               <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Tables</li>
             </ol> --}}
-            <h6 class="font-weight-bolder mb-0">Tables</h6>
+            <h4 class="font-weight-bolder mb-0">Tables</h4>
           </nav>
           {{-- <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
             <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -167,9 +167,6 @@
                         <span class="text-secondary text-xs font-weight-bold">{{$ds['created_at']}}</span>
                       </td>
                       <td class="align-middle text-center">
-                        <a href="/edit" class="text-secondary font-weight-bold text-xs m-2" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
                         <a href="/detail" class="text-secondary font-weight-bold text-xs m-2" data-toggle="tooltip" data-original-title="Detail user">
                           Detail
                         </a>

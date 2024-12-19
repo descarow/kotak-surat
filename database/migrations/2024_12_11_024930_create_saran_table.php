@@ -14,9 +14,10 @@ return new class extends Migration
     {
         Schema::create('saran', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->foreignId('user_id')->constrained('users');
             $table->enum('type', ['saran', 'kritik', 'pujian'])->default('saran');
             $table->text('message');
+
             $table->timestamps();
         });
     }
