@@ -42,9 +42,16 @@
         </div>
         <div class="card-footer text-center">
           <button type="submit" class="btn btn-primary w-100">
-            <i class="fa fa-dot-circle-o"></i> Submit
+            <i class="fa fa-paper-plane"></i> Submit
           </button>
-        </div>
+          <!-- Icon for admin response -->
+          <div class="mt-3">
+            <a href="/responses" class="text-secondary" title="View responses from admin">
+              <i class="fa fa-comments fa-2x"></i>
+              <p class="mt-1">View Responses</p>
+            </a>
+          </div>
+        </div>        
       </form>
     </div>
   </main>

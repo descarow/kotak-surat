@@ -18,6 +18,11 @@ class BlogController extends Controller
         return redirect()->route('table');
     }
 
+    public function detail(Request $request,$id){
+        $data_saran=Saran::findorfail($id);
+        return view('masterdetail', compact('data_saran'));
+    }
+
     public function user(){
         return view('frontend.user');
     }

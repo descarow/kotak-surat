@@ -167,7 +167,7 @@
                         <span class="text-secondary text-xs font-weight-bold">{{$ds['created_at']}}</span>
                       </td>
                       <td class="align-middle text-center">
-                        <a href="/detail" class="text-secondary font-weight-bold text-xs m-2" data-toggle="tooltip" data-original-title="Detail user">
+                        <a href="{{route('detail', $ds['id'])}}" class="text-secondary font-weight-bold text-xs m-2" data-toggle="tooltip" data-original-title="Detail user">
                           Detail
                         </a>
                         <a href="{{route('delete', $ds['id'])}}" class="text-secondary font-weight-bold text-xs m-2" data-toggle="tooltip" data-original-title="Delete user">
